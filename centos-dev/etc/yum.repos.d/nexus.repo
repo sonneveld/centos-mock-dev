@@ -1,0 +1,83 @@
+[centos-base-proxy]
+name=Nexus Mirror - CentOS-$releasever - Base
+baseurl=http://nexus:8081/repository/centos-proxy/$releasever/os/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+priority=1
+
+
+[centos-updates-proxy]
+name=Nexus Mirror - CentOS-$releasever - Updates
+baseurl=http://nexus:8081/repository/centos-proxy/$releasever/updates/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+priority=1
+
+
+[centos-extras-proxy]
+name=Nexus Mirror - CentOS-$releasever - Extras
+baseurl=http://nexus:8081/repository/centos-proxy/$releasever/extras/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+priority=1
+
+
+# not designed to be completely enabled
+[centos-plus-proxy]
+name=Nexus Mirror - CentOS-$releasever - Plus
+baseurl=http://nexus:8081/repository/centos-proxy/$releasever/centosplus/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+priority=1
+
+
+
+
+
+
+[epel-proxy]
+name=Nexus Mirror - Extra Packages for Enterprise Linux $releasever - $basearch
+baseurl=http://nexus:8081/repository/epel-proxy/$releasever/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
+[epel-debuginfo-proxy]
+name=Nexus Mirror - Extra Packages for Enterprise Linux $releasever - $basearch - Debug
+baseurl=http://nexus:8081/repository/epel-proxy/$releasever/$basearch/debug
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+[epel-source-proxy]
+name=Nexus Mirror - Extra Packages for Enterprise Linux $releasever - $basearch - Source
+baseurl=http://nexus:8081/repository/epel-proxy/$releasever/SRPMS
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+gpgcheck=1
+
+
+
+
+
+
+[docker-ce-stable-proxy]
+name=Nexus Mirror - Docker CE Stable - CentOS-$releasever
+baseurl=http://nexus:8081/repository/docker-yum-proxy/centos/$releasever/$basearch/stable
+enabled=1
+gpgcheck=1
+gpgkey=https://download.docker.com/linux/centos/gpg
+
+
+
+[code-proxy]
+name=Nexus Mirror - Visual Studio Code
+baseurl=http://nexus:8081/repository/vscode-yum-proxy/
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+
